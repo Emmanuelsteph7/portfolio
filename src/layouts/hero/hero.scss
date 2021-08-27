@@ -1,0 +1,50 @@
+@use "styles" as *;
+
+.hero {
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+
+  &:before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    border-radius: 40%;
+    background-color: color(mainColorDark);
+    position: absolute;
+    transform: translate(42%, -40%) rotate(32deg);
+  }
+
+  .hero__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+  }
+
+  .hero__info {
+    width: 40%;
+  }
+
+  .hero__mainHeader {
+    margin-left: -4px;
+  }
+
+  .hero__paragraph {
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+    font-weight: 500;
+  }
+
+  .hero__social {
+    display: flex;
+    width: 100px;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+  }
+
+  .hero__avatar {
+    width: 50%;
+  }
+}

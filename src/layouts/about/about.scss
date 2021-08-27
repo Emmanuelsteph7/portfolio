@@ -1,0 +1,21 @@
+@use "styles" as *;
+
+.about {
+  .about__profile {
+    display: flex;
+    margin: 25px 0;
+    justify-content: space-between;
+  }
+
+  .about__profileInfo {
+    width: 50%;
+  }
+
+  .about__profileParagraph {
+    font-weight: 500;
+  }
+
+  .about__profileImageDiv {
+    width: 40%;
+  }
+}

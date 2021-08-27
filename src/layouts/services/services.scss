@@ -1,0 +1,8 @@
+@use "styles" as *;
+
+.services {
+  .services__body {
+    display: flex;
+    justify-content: space-between;
+  }
+}

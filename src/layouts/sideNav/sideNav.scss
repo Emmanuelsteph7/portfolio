@@ -1,0 +1,43 @@
+@use "styles" as *;
+
+.sideNav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 300px;
+  background-image: linear-gradient(color(borderColor), color(bgDark));
+
+  .sideNav__container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .sideNav__person {
+    text-align: center;
+    padding: 20px 0;
+    border-bottom: 1px solid color(borderColor);
+  }
+
+  .sideNav__imageDiv {
+    max-width: 200px;
+    max-height: 200px;
+    border-radius: 50%;
+    margin: 0 auto;
+    overflow: hidden;
+    border-top: 10px solid color(borderColor);
+    border-bottom: 10px solid color(bgDark);
+    border-left: 10px solid color(borderColor);
+    border-right: 10px solid color(bgDark);
+    box-shadow: 0 0 10px color(secondaryColor);
+  }
+
+  .sideNav__footer {
+    text-align: center;
+    padding: 20px 0;
+    border-top: 1px solid color(borderColor);
+    color: color(white);
+  }
+}

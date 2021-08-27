@@ -1,0 +1,54 @@
+@use "styles" as *;
+
+.serviceCard {
+  width: 30%;
+  max-width: 300px;
+  box-shadow: 0 0 3px color(mainColorDark);
+  background-color: color(white);
+  position: relative;
+  transition: 0.3s ease-out;
+
+  &:hover {
+    box-shadow: 5px 3px 12px color(mainColorDark);
+    transform: translateY(-10px);
+
+    .serviceCard__logo {
+      background-color: color(mainColorDark);
+
+      svg {
+        path {
+          fill: color(mainColorDark);
+          stroke: color(lightBg);
+        }
+      }
+    }
+  }
+
+  .serviceCard__container {
+    padding: 35px 20px;
+  }
+
+  .serviceCard__logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    box-shadow: 0 0 3px color(mainColorDark);
+    margin: 0 auto;
+    font-size: 3rem;
+    transition: 0.3s ease-out;
+  }
+
+  .serviceCard__header,
+  .serviceCard__paragraph {
+    margin: 15px auto;
+    text-align: center;
+  }
+
+  .serviceCard__btn {
+    width: 100%;
+  }
+}
