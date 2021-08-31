@@ -1,0 +1,18 @@
+@use "styles" as *;
+
+.subheader--style {
+  opacity: 0;
+  transform: translateX(100px);
+
+  &.show {
+    animation: animateLeft 0.5s forwards ease-out;
+  }
+}
+
+.sectionHeader--style {
+  opacity: 0;
+  transform: translateX(-100px);
+  &.show {
+    animation: animateRight 0.5s forwards ease-out;
+  }
+}

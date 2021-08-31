@@ -2,9 +2,9 @@ import { Link } from "react-router-dom";
 import { FiChevronsRight } from "react-icons/fi";
 import "./portfolioCard.scss";
 
-const PortfolioCard = ({ name, img, desc, link }) => {
+const PortfolioCard = ({ name, img, desc, link, refValue }) => {
   return (
-    <div className="portfolioCard">
+    <div className="portfolioCard" ref={refValue}>
       <div className="portfolioCard__container">
         <div className="portfolioCard__imageDiv">
           <img src={img} alt="" className="portfolioCard__image" />

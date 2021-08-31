@@ -2,6 +2,17 @@
 
 .about {
   margin-bottom: 60px;
+  overflow: hidden;
+
+  &.show {
+    .about__profileImageDiv {
+      animation: animateRight 0.5s forwards ease-out;
+    }
+
+    .about__profileInfo {
+      animation: animateLeft 0.5s forwards ease-out;
+    }
+  }
 
   .about__profile {
     display: flex;
@@ -15,6 +26,12 @@
 
   .about__profileInfo {
     width: 60%;
+    opacity: 0;
+    transform: translateX(100px);
+
+    &.show {
+      animation: animateLeft 0.5s forwards ease-out;
+    }
 
     @include maxWidth(767px) {
       width: 100%;
@@ -27,6 +44,12 @@
 
   .about__profileImageDiv {
     width: 35%;
+    opacity: 0;
+    transform: translateX(-100px);
+
+    &.show {
+      animation: animateRight 0.5s forwards ease-out;
+    }
 
     @include maxWidth(767px) {
       width: 100%;

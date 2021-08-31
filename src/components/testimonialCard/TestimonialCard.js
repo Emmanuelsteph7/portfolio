@@ -1,8 +1,8 @@
 import "./testimonialCard.scss";
 
-const TestimonialCard = ({ name, status, paragraph, image }) => {
+const TestimonialCard = ({ name, status, paragraph, image, refValue }) => {
   return (
-    <div className="testimonialCard">
+    <div className="testimonialCard" ref={refValue}>
       <div className="testimonialCard__container">
         <div className="testimonialCard__imageDiv">
           <img src={image} alt="" className="testimonialCard__image" />

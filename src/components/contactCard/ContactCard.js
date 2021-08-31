@@ -1,8 +1,8 @@
 import "./contactCard.scss";
 
-const ContactCard = ({ icon, name, details, href }) => {
+const ContactCard = ({ icon, name, details, href, refValue }) => {
   return (
-    <div className="contactCard">
+    <div className="contactCard" ref={refValue}>
       <a href={href}>
         <div className="contactCard__container">
           <div className="contactCard__imageDiv">

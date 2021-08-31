@@ -1,10 +1,17 @@
 @use "styles" as *;
 
 .portfolio {
+  overflow: hidden;
   .portfolio__toggleSection {
     margin: 0 auto 30px;
     width: fit-content;
     display: flex;
+    opacity: 0;
+    transform: translateX(100px);
+
+    &.show {
+      animation: animateLeft 0.5s forwards ease-out;
+    }
   }
 
   .portfolio__toggle {

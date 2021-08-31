@@ -1,8 +1,8 @@
 import "./serviceCard.scss";
 
-const ServiceCard = ({ logo, header, details }) => {
+const ServiceCard = ({ logo, header, details, refValue }) => {
   return (
-    <div className="serviceCard">
+    <div className="serviceCard" ref={refValue}>
       <div className="serviceCard__container">
         <div className="serviceCard__logo">{logo}</div>
         <h4 className="serviceCard__header header4">{header}</h4>

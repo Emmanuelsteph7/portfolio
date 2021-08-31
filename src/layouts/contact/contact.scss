@@ -1,6 +1,7 @@
 @use "styles" as *;
 
 .contact {
+  overflow: hidden;
   margin-bottom: 50px;
   .contact__cards {
     display: flex;

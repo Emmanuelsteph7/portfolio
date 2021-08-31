@@ -1,7 +1,19 @@
 import { QualificationCard, SectionHeaders } from "components";
+import { scrollFunc } from "components/index";
+import { useEffect, useRef } from "react";
 import "./qualification.scss";
 
 const Qualification = () => {
+  const workRef = useRef();
+  const educationRef = useRef();
+  // const headerRef = useRef();
+
+  useEffect(() => {
+    scrollFunc(workRef, 2);
+  }, []);
+  useEffect(() => {
+    scrollFunc(educationRef, 2);
+  }, []);
   return (
     <div className="qualification">
       <div className="qualification__container container">
@@ -11,7 +23,7 @@ const Qualification = () => {
           sectionHeader="Qualification"
         />
         <div className="qualification__profile">
-          <div className="qualification__profileDetail">
+          <div className="qualification__profileDetail" ref={workRef}>
             <h4 className="qualification__profileHeader header3">
               Work Experience
             </h4>
@@ -37,7 +49,7 @@ const Qualification = () => {
               endTime="Till Date"
             />
           </div>
-          <div className="qualification__profileDetail">
+          <div className="qualification__profileDetail" ref={educationRef}>
             <h4 className="qualification__profileHeader header3">Education</h4>
             <QualificationCard
               title="B.Eng Petroleum Engineering"

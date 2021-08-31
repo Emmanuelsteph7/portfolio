@@ -1,8 +1,20 @@
 import person from "assets/images/person.png";
 import { SectionHeaders } from "components";
+import { scrollFunc } from "components/index";
+import { useEffect, useRef } from "react";
 import "./about.scss";
 
 const About = () => {
+  const imageRef = useRef();
+  const profileRef = useRef();
+  // const headerRef = useRef();
+
+  useEffect(() => {
+    scrollFunc(imageRef, 2);
+  }, []);
+  useEffect(() => {
+    scrollFunc(profileRef, 2);
+  }, []);
   return (
     <div className="about">
       <div className="about__container container">
@@ -12,12 +24,12 @@ const About = () => {
           sectionHeader="About Me"
         />
         <div className="about__profile">
-          <div className="about__profileImageDiv">
+          <div className="about__profileImageDiv" ref={imageRef}>
             <div className="about__profileImageDivContainer">
               <img src={person} alt="" className="about__profileImage" />
             </div>
           </div>
-          <div className="about__profileInfo">
+          <div className="about__profileInfo" ref={profileRef}>
             <h2 className="about__profileHeader header3">Hello, I am</h2>
             <p className="about__profileParagraph">
               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Numquam

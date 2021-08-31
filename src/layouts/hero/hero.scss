@@ -153,28 +153,6 @@
     }
   }
 
-  @keyframes animateRight {
-    0% {
-      opacity: 0;
-      transform: translateX(-100px);
-    }
-    100% {
-      opacity: 1;
-      transform: translateX(0);
-    }
-  }
-
-  @keyframes animateLeft {
-    0% {
-      opacity: 0;
-      transform: translateX(100px);
-    }
-    100% {
-      opacity: 1;
-      transform: translateX(0);
-    }
-  }
-
   .hero__avatar {
     position: relative;
     width: 45%;
@@ -195,7 +173,7 @@
     height: 450px;
     overflow: hidden;
     margin: 0 auto;
-    box-shadow: 0 0 50px color(mainColorDark);
+    box-shadow: 0 0 10px color(mainColorDark);
     opacity: 0;
     transform: translateX(100px);
     animation: animateLeft 0.5s forwards ease-out;

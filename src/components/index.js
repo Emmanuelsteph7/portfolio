@@ -8,6 +8,7 @@ import PortfolioCard from "./portfolioCard/PortfolioCard";
 import TestimonialCard from "./testimonialCard/TestimonialCard";
 import ContactCard from "./contactCard/ContactCard";
 import Form from "./form/Form";
+import scrollFunc from "./scrollFunc/ScrollFunc";
 
 export {
   NavbarLink,
@@ -20,4 +21,5 @@ export {
   TestimonialCard,
   ContactCard,
   Form,
+  scrollFunc,
 };

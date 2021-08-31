@@ -1,6 +1,7 @@
 @use "styles" as *;
 
 .testimonial {
+  overflow: hidden;
   margin-bottom: 50px;
 
   .testimonial__cards {
