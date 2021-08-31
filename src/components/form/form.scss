@@ -1,0 +1,52 @@
+@use "styles" as *;
+
+.form {
+  width: 60%;
+  margin: 0 auto;
+  box-shadow: 0 0 3px color(mainColorDark);
+  padding: 2rem 1rem;
+  border-radius: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  transition: 0.3s ease-out;
+
+  @include maxWidth(767px) {
+    width: 100%;
+    // max-width: 400px;
+  }
+
+  // @include maxWidth(575px) {
+  //   width: 100%;
+  // }
+
+  &:hover {
+    box-shadow: 5px 3px 12px color(mainColorDark);
+
+    .contactCard__imageDiv {
+      background-color: color(mainColorDark);
+    }
+
+    .contactCard__icon {
+      color: color(lightBg);
+    }
+  }
+
+  .formGroup--input {
+    width: 45%;
+    margin-bottom: 20px;
+
+    @include maxWidth(767px) {
+      width: 100%;
+    }
+  }
+
+  .formGroup--textarea {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .formGroup--submit {
+    width: 100%;
+  }
+}

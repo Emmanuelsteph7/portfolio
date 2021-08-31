@@ -1,13 +1,14 @@
 import { SocialIcons } from "components";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
+import person from "assets/images/person.png";
 import "./hero.scss";
 
 const Hero = () => {
   return (
     <div className="hero">
       <div className="hero__container container">
-        <div className="header__info">
-          <h2 className="header__secondaryHeader header3">Hi, I'm </h2>
+        <div className="hero__info">
+          <h2 className="hero__secondaryHeader header3">Hi, I'm </h2>
           <h1 className="hero__mainHeader header1">Emmanuel Stephen</h1>
           <p className="hero__paragraph">Frontend Developer</p>
           <div className="header__btnDiv">
@@ -24,7 +25,7 @@ const Hero = () => {
         </div>
         <div className="hero__avatar">
           <div className="hero__avatarContainer">
-            <img src="" alt="" className="hero__avatarImg" />
+            <img src={person} alt="" className="hero__avatarImg" />
           </div>
         </div>
       </div>

@@ -82,5 +82,10 @@
         right: 0;
       }
     }
+
+    @include maxWidth(575px) {
+      height: calc(100vh - 66px);
+      top: 66px;
+    }
   }
 }

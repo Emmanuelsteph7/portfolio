@@ -2,15 +2,24 @@
 
 .serviceCard {
   width: 30%;
-  max-width: 300px;
+  max-width: 350px;
   box-shadow: 0 0 3px color(mainColorDark);
   background-color: color(white);
   position: relative;
+  border-radius: 5px;
   transition: 0.3s ease-out;
+
+  @include maxWidth(991px) {
+    width: 40%;
+    margin-bottom: 30px;
+  }
+
+  @include maxWidth(575px) {
+    width: 100%;
+  }
 
   &:hover {
     box-shadow: 5px 3px 12px color(mainColorDark);
-    transform: translateY(-10px);
 
     .serviceCard__logo {
       background-color: color(mainColorDark);

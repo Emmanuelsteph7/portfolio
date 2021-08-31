@@ -4,6 +4,10 @@ import Hamburger from "./hamburger/Hamburger";
 import QualificationCard from "./qualificationCard/QualificationCard";
 import SectionHeaders from "./sectionHeaders/SectionHeaders";
 import ServiceCard from "./serviceCard/ServiceCard";
+import PortfolioCard from "./portfolioCard/PortfolioCard";
+import TestimonialCard from "./testimonialCard/TestimonialCard";
+import ContactCard from "./contactCard/ContactCard";
+import Form from "./form/Form";
 
 export {
   NavbarLink,
@@ -12,4 +16,8 @@ export {
   QualificationCard,
   SectionHeaders,
   ServiceCard,
+  PortfolioCard,
+  TestimonialCard,
+  ContactCard,
+  Form,
 };

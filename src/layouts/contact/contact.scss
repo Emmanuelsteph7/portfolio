@@ -1,9 +1,8 @@
 @use "styles" as *;
 
-.services {
-  margin-bottom: 60px;
-
-  .services__body {
+.contact {
+  margin-bottom: 50px;
+  .contact__cards {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;

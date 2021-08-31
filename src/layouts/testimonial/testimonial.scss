@@ -1,9 +1,9 @@
 @use "styles" as *;
 
-.services {
-  margin-bottom: 60px;
+.testimonial {
+  margin-bottom: 50px;
 
-  .services__body {
+  .testimonial__cards {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;

@@ -1,6 +1,8 @@
 @use "styles" as *;
 
 .qualification {
+  margin-bottom: 60px;
+
   .qualification__subHeader,
   .qualification__mainHeader {
     text-align: center;
@@ -9,10 +11,20 @@
   .qualification__profile {
     display: flex;
     justify-content: space-between;
+
+    @include maxWidth(991px) {
+      flex-direction: column;
+    }
   }
 
   .qualification__profileDetail {
     width: 45%;
+
+    @include maxWidth(991px) {
+      width: 100%;
+      margin-bottom: 30px;
+      flex-direction: column;
+    }
   }
 
   .qualification__profileHeader {

@@ -1,0 +1,51 @@
+@use "styles" as *;
+
+.portfolio {
+  .portfolio__toggleSection {
+    margin: 0 auto 30px;
+    width: fit-content;
+    display: flex;
+  }
+
+  .portfolio__toggle {
+    margin-right: 10px;
+    color: color(firstColorLight);
+    transition: 0.3s ease-out;
+    font-weight: 700;
+    cursor: pointer;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &.active,
+    &:hover {
+      font-weight: 600;
+      color: color(mainColorDark);
+    }
+  }
+
+  .portfolio__cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    opacity: 0;
+    display: none;
+
+    &.active {
+      display: flex;
+      opacity: 1;
+      animation: 0.4s fadeIn forwards;
+    }
+  }
+
+  @keyframes fadeIn {
+    0% {
+      transform: scale(0.7);
+    }
+
+    100% {
+      transform: scale(1);
+    }
+  }
+}

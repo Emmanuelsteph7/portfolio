@@ -1,3 +1,4 @@
+import person from "assets/images/person.png";
 import { SectionHeaders } from "components";
 import "./about.scss";
 
@@ -11,6 +12,11 @@ const About = () => {
           sectionHeader="About Me"
         />
         <div className="about__profile">
+          <div className="about__profileImageDiv">
+            <div className="about__profileImageDivContainer">
+              <img src={person} alt="" className="about__profileImage" />
+            </div>
+          </div>
           <div className="about__profileInfo">
             <h2 className="about__profileHeader header3">Hello, I am</h2>
             <p className="about__profileParagraph">
@@ -19,9 +25,6 @@ const About = () => {
               mollitia fuga autem dignissimos quas harum ullam.
             </p>
             <div className="about__profileInfoDetails"></div>
-          </div>
-          <div className="about__profileImageDiv">
-            <img src="" alt="" className="about__profileImage" />
           </div>
         </div>
       </div>
