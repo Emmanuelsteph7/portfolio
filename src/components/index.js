@@ -9,6 +9,7 @@ import TestimonialCard from "./testimonialCard/TestimonialCard";
 import ContactCard from "./contactCard/ContactCard";
 import Form from "./form/Form";
 import scrollFunc from "./scrollFunc/ScrollFunc";
+import SkillsCard from "./skillsCard/SkillsCard";
 
 export {
   NavbarLink,
@@ -22,4 +23,5 @@ export {
   ContactCard,
   Form,
   scrollFunc,
+  SkillsCard,
 };

@@ -6,6 +6,7 @@ import Hero from "layouts/hero/Hero";
 import Portfolio from "layouts/portfolio/Portfolio";
 import Qualification from "layouts/qualification/Qualification";
 import Services from "layouts/services/Services";
+import Skills from "layouts/skills/Skills";
 import Testimonial from "layouts/testimonial/Testimonial";
 
 const App = () => {
@@ -15,6 +16,7 @@ const App = () => {
       <Hero />
       <About />
       <Qualification />
+      <Skills />
       <Services />
       <Portfolio />
       <Testimonial />

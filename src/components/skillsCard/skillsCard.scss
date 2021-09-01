@@ -1,0 +1,25 @@
+@use "styles" as *;
+
+.skillsCard {
+  width: 150px;
+  margin-bottom: 10px;
+  padding-bottom: 15px;
+  border-radius: 5px;
+  transition: 0.3s ease-out;
+
+  &:hover {
+    background-color: color(mainColorDark);
+    color: color(lightBg);
+    box-shadow: 3px 3px 5px color(mainColorDark);
+  }
+
+  .skillsCard__imageDiv {
+    margin: 0 auto 15px;
+    font-size: 3.5rem;
+    text-align: center;
+  }
+
+  .skillsCard__name {
+    text-align: center;
+  }
+}

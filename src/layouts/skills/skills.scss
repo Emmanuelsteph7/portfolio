@@ -1,0 +1,11 @@
+@use "styles" as *;
+
+.skills {
+  margin-bottom: 30px;
+
+  .skills__cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+}
