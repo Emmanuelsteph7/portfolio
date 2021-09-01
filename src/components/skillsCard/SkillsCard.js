@@ -1,8 +1,8 @@
 import "./skillsCard.scss";
 
-const SkillsCard = ({ src, name }) => {
+const SkillsCard = ({ src, name, refValue }) => {
   return (
-    <div className="skillsCard">
+    <div className="skillsCard" ref={refValue}>
       <div className="skillsCard__imageDiv">
         {/* <img src={src} alt="" className="skillsCard__image" /> */}
         {src}
