@@ -8,16 +8,6 @@ import {
   FaNodeJs,
 } from "react-icons/fa";
 import { SiSass, SiJavascript } from "react-icons/si";
-import {
-  css,
-  git,
-  github,
-  javaScript,
-  node,
-  react,
-  sass,
-  html,
-} from "assets/index";
 import "./skills.scss";
 
 const Skills = () => {
