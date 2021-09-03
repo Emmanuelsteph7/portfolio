@@ -18,19 +18,19 @@ const Header = () => {
         </div>
         <nav className={`header__nav ${showNav && "show"}`}>
           <NavbarLink onClick={handleNav} to="/">
-            Home
+            &lt;Home /&gt;
           </NavbarLink>
           <NavbarLink onClick={handleNav} to="/about">
-            About
+            &lt;About /&gt;
           </NavbarLink>
           <NavbarLink onClick={handleNav} to="/services">
-            Services
+            &lt;Services /&gt;
           </NavbarLink>
           <NavbarLink onClick={handleNav} to="/portfolio">
-            Portfolio
+            &lt;Portfolio /&gt;
           </NavbarLink>
           <NavbarLink onClick={handleNav} to="/contact">
-            Contact Me
+            &lt;Contact Me /&gt;
           </NavbarLink>
         </nav>
         <Hamburger toggleFunc={handleNav} toggle={showNav} />

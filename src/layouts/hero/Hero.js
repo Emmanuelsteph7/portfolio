@@ -1,9 +1,12 @@
 import { SocialIcons } from "components";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { useHistory } from "react-router-dom";
 import person from "assets/images/person.png";
 import "./hero.scss";
 
 const Hero = () => {
+  const history = useHistory();
+
   return (
     <div className="hero">
       <div className="hero__container container">
@@ -15,10 +18,10 @@ const Hero = () => {
             <button className="header__btn btn">Download CV</button>
           </div>
           <div className="hero__social">
-            <SocialIcons>
+            <SocialIcons to="https://github.com/Emmanuelsteph7">
               <FaGithub />
             </SocialIcons>
-            <SocialIcons>
+            <SocialIcons to="https://www.linkedin.com/in/osemenestephen/">
               <FaLinkedin />
             </SocialIcons>
           </div>

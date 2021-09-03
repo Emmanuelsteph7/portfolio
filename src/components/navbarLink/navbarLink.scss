@@ -1,11 +1,13 @@
 @use "styles" as *;
 
 .navLink {
-  text-transform: uppercase;
+  // text-transform: uppercase;
   text-align: center;
   color: color(textColor);
+  font-style: italic;
   font-weight: 500;
   position: relative;
+  font-family: "Josefin Sans", sans-serif;
   transition: 0.3s ease-out;
 
   @include maxWidth(991px) {

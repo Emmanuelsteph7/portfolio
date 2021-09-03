@@ -3,7 +3,11 @@ import "./socialIcons.scss";
 
 const SocialIcons = ({ children, to }) => {
   return (
-    <Link to={to ? to : "/"} className="socialIcons">
+    <Link
+      to={to ? { pathname: to } : "/"}
+      target={to ? "_blank" : "_self"}
+      className="socialIcons"
+    >
       {children}
     </Link>
   );
