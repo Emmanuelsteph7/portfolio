@@ -16,7 +16,7 @@ const About = () => {
     scrollFunc(profileRef, 2);
   }, []);
   return (
-    <div className="about">
+    <div className="about" id="about">
       <div className="about__container container">
         <SectionHeaders
           section="about"
