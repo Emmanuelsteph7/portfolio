@@ -1,11 +1,11 @@
 import { SocialIcons } from "components";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
-import { useHistory } from "react-router-dom";
+// import { useHistory } from "react-router-dom";
 import person from "assets/images/person.png";
 import "./hero.scss";
 
 const Hero = () => {
-  const history = useHistory();
+  // const history = useHistory();
 
   return (
     <div className="hero">
