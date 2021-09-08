@@ -52,7 +52,7 @@
   font-weight: 600;
   line-height: 1.5;
   font-family: "Josefin Sans", sans-serif;
-  color: color(darkPink);
+  // color: color(darkPink);
 
   @include minWidth(768px) {
     font-size: 3.5rem;
@@ -64,7 +64,7 @@
   font-weight: 600;
   line-height: 1.5;
   font-family: "Josefin Sans", sans-serif;
-  color: color(darkPink);
+  // color: color(darkPink);
 
   @include minWidth(768px) {
     font-size: 2.25rem;
@@ -76,7 +76,7 @@
   font-weight: 600;
   line-height: 1.5;
   font-family: "Josefin Sans", sans-serif;
-  color: color(darkPink);
+  // color: color(darkPink);
 
   @include minWidth(768px) {
     font-size: 1.5rem;
@@ -154,6 +154,17 @@
   }
 }
 
+@keyframes animateUp {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 @keyframes animateLeft {
   0% {
     opacity: 0;
@@ -162,5 +173,17 @@
   100% {
     opacity: 1;
     transform: translateX(0);
+    transform: none;
+  }
+}
+
+@keyframes animateHeader {
+  0% {
+    opacity: 0;
+    margin-top: -100px;
+  }
+  100% {
+    opacity: 1;
+    margin-top: 0px;
   }
 }

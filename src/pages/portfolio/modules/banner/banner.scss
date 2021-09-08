@@ -1,0 +1,86 @@
+@use "styles" as *;
+
+.portBanner {
+  margin-top: 65px;
+  padding: 50px 0 30px;
+  overflow: hidden;
+
+  .portBanner__container {
+    width: 80%;
+
+    @include maxWidth(991px) {
+      width: 90%;
+    }
+  }
+
+  .portBanner__head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+
+    @include maxWidth(767px) {
+      flex-direction: column;
+      align-items: flex-start;
+      margin-bottom: 30px;
+    }
+  }
+
+  .portBanner__header {
+    @include maxWidth(767px) {
+      margin-bottom: 15px;
+    }
+
+    &.show {
+      animation: animateLeft 0.5s forwards ease-out;
+    }
+  }
+
+  .portBanner__visitBtn {
+    .linkTag {
+      padding: 0.5rem 1.3rem;
+    }
+
+    &.show {
+      animation: animateRight 0.5s forwards ease-out;
+    }
+  }
+
+  .portBanner__carousel {
+    height: 400px;
+    width: 80%;
+    margin: 0 auto;
+    position: relative;
+
+    @include maxWidth(1199px) {
+      width: 100%;
+    }
+
+    @include maxWidth(767px) {
+      height: 320px;
+    }
+
+    @include maxWidth(575px) {
+      height: 250px;
+    }
+
+    &.show {
+      animation: animateUp 0.5s forwards ease-out;
+    }
+  }
+
+  .imageSlider {
+    width: 100%;
+    height: 100%;
+  }
+
+  .portBanner__carouselBg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.1);
+    z-index: 2;
+  }
+}

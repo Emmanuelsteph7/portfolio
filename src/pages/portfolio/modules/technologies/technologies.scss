@@ -1,0 +1,37 @@
+@use "styles" as *;
+
+.portTech {
+  padding: 30px 0;
+  overflow: hidden;
+
+  .portTech__container {
+    width: 80%;
+  }
+
+  .portTech__header {
+    margin-bottom: 20px;
+    opacity: 0;
+    transform: translateX(100px);
+
+    &.show {
+      animation: animateLeft 0.5s forwards ease-out;
+    }
+  }
+
+  .portTech__paragraphs {
+    .listItem {
+      opacity: 0;
+
+      &.show {
+        &:nth-child(odd) {
+          transform: translateX(-100px);
+          animation: animateRight 0.5s forwards ease-out;
+        }
+        &:nth-child(even) {
+          transform: translateX(100px);
+          animation: animateLeft 0.5s forwards ease-out;
+        }
+      }
+    }
+  }
+}

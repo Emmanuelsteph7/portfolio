@@ -1,0 +1,46 @@
+@use "styles" as *;
+
+.footer {
+  overflow: hidden;
+  background-color: color(mainColorDark);
+  padding: 30px 0 50px;
+  transform: translateY(100px);
+  opacity: 0;
+  color: color(lightBg);
+  position: relative;
+
+  &.show {
+    animation: animateDown 0.5s forwards ease-out;
+  }
+
+  .footer__header,
+  .footer__paragraph,
+  .footer__copyright {
+    text-align: center;
+  }
+
+  .footer__header {
+    margin-bottom: 20px;
+  }
+
+  .footer__socials {
+    margin: 20px auto;
+    width: fit-content;
+    display: flex;
+
+    .socialIcons {
+      background-color: color(lightBg);
+      color: color(mainColorDark);
+
+      &:hover {
+        background-color: color(mainColorDark);
+        color: color(lightBg);
+        box-shadow: 0 0 3px color(lightBg);
+      }
+
+      &:nth-child(1) {
+        margin-right: 10px;
+      }
+    }
+  }
+}

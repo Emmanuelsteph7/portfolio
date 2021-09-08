@@ -1,0 +1,35 @@
+@use "styles" as *;
+
+.portAbout {
+  padding: 30px 0;
+  overflow: hidden;
+
+  .portAbout__container {
+    width: 80%;
+  }
+
+  .portAbout__header {
+    margin-bottom: 20px;
+    opacity: 0;
+    transform: translateX(100px);
+
+    &.show {
+      animation: animateLeft 0.5s forwards ease-out;
+    }
+  }
+
+  .portAbout__paragraph {
+    opacity: 0;
+
+    &.show {
+      &:nth-child(odd) {
+        transform: translateX(-100px);
+        animation: animateRight 0.5s forwards ease-out;
+      }
+      &:nth-child(even) {
+        transform: translateX(100px);
+        animation: animateLeft 0.5s forwards ease-out;
+      }
+    }
+  }
+}

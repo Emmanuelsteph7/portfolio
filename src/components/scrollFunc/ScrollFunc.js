@@ -4,8 +4,9 @@
 const scrollFunc = (elementRef, offsetNo) => {
   const handleScroll = () => {
     if (
+      elementRef.current != null &&
       elementRef.current.getBoundingClientRect().top <=
-      window.innerHeight / (offsetNo || 2)
+        window.innerHeight / (offsetNo || 1.5)
     ) {
       elementRef.current.classList.add("show");
     }
@@ -14,8 +15,9 @@ const scrollFunc = (elementRef, offsetNo) => {
   window.addEventListener("scroll", handleScroll);
 
   if (
+    elementRef.current != null &&
     elementRef.current.getBoundingClientRect().top <=
-    window.innerHeight / (offsetNo || 2)
+      window.innerHeight / (offsetNo || 1.5)
   ) {
     elementRef.current.classList.add("show");
   }

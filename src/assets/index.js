@@ -7,5 +7,17 @@ import node from "./images/node.png";
 import react from "./images/react.png";
 import sass from "./images/sass.png";
 import html from "./images/html.png";
+import shopIt from "./images/shopIt.png";
 
-export { person, css, git, github, javaScript, node, react, sass, html };
+export {
+  person,
+  css,
+  git,
+  github,
+  javaScript,
+  node,
+  react,
+  sass,
+  html,
+  shopIt,
+};

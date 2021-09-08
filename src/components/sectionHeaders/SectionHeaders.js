@@ -7,11 +7,11 @@ const SectionHeaders = ({ subHeader, sectionHeader, section, show }) => {
   const sectionHeaderRef = useRef();
 
   useEffect(() => {
-    scrollFunc(subHeaderRef, 2);
+    scrollFunc(subHeaderRef);
   }, []);
 
   useEffect(() => {
-    scrollFunc(sectionHeaderRef, 2);
+    scrollFunc(sectionHeaderRef);
   }, []);
   return (
     <>

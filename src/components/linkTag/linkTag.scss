@@ -1,0 +1,42 @@
+@use "styles" as *;
+
+.linkTag {
+  text-decoration: none;
+  color: color(whiteColor);
+  font-weight: 400;
+  transition: 0.3s;
+
+  &:hover {
+    color: color(mainColor);
+  }
+
+  &.btn {
+    border: 1px solid color(mainColor);
+    outline: none;
+    padding: 0.7rem 2.5rem;
+    border-radius: 5px;
+    color: color(whiteColor);
+    cursor: pointer;
+    background-color: color(mainColor);
+    transition: 0.3s ease-in-out;
+
+    &:hover {
+      background-color: color(mainColor);
+      color: color(lightBg);
+      border: 1px solid color(mainColor);
+    }
+  }
+
+  &.outline {
+    @extend .btn;
+
+    color: color(whiteColor);
+    background-color: transparent;
+    border: 1px solid color(whiteColor);
+
+    &:hover {
+      color: color(mainColor);
+      background-color: transparent;
+    }
+  }
+}

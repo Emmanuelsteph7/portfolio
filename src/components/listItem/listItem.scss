@@ -1,0 +1,40 @@
+@use "../../styles" as *;
+
+.listItem {
+  margin-bottom: 15px;
+  opacity: 0;
+
+  &.show {
+    &:nth-child(odd) {
+      transform: translateX(-100px);
+      animation: animateRight 0.5s forwards ease-out;
+    }
+    &:nth-child(even) {
+      transform: translateX(100px);
+      animation: animateLeft 0.5s forwards ease-out;
+    }
+  }
+
+  .listItem__container {
+    display: flex;
+  }
+
+  .listItem__icon {
+    font-size: 1.5rem;
+    margin-right: 10px;
+    width: fit-content;
+
+    &.verified {
+      color: rgb(11, 97, 11);
+    }
+
+    &.warning {
+      color: rgb(97, 11, 11);
+    }
+  }
+
+  .listItem__paragraphHeader {
+    font-weight: 600;
+    margin-right: 5px;
+  }
+}

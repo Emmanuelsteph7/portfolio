@@ -10,6 +10,11 @@ import ContactCard from "./contactCard/ContactCard";
 import Form from "./form/Form";
 import scrollFunc from "./scrollFunc/ScrollFunc";
 import SkillsCard from "./skillsCard/SkillsCard";
+import LinkTag from "./linkTag/LinkTag";
+import ImageSlider from "./imageSlider/ImageSlider";
+import ListItem from "./listItem/ListItem";
+import Header from "./header/Header";
+import Footer from "./footer/Footer";
 
 export {
   NavbarLink,
@@ -24,4 +29,9 @@ export {
   Form,
   scrollFunc,
   SkillsCard,
+  LinkTag,
+  ImageSlider,
+  ListItem,
+  Header,
+  Footer,
 };
