@@ -1,1 +1,7 @@
 @use "styles/base/reset" as *;
+@use "styles/abstract/functions" as *;
+
+.app__container {
+  background-color: color(lightBg2);
+  position: relative;
+}

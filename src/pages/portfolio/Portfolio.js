@@ -23,8 +23,6 @@ const Portfolio = ({ match }) => {
 
   let newData = filteredData[0];
 
-  console.log(filteredData[0]);
-
   return (
     <>
       <Header />

@@ -1,0 +1,180 @@
+@use "styles" as *;
+
+.animateSkills {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  z-index: -1;
+  left: 0;
+
+  .skillsCard {
+    opacity: 1;
+    position: absolute;
+
+    &:nth-child(1) {
+      animation: animateSkill 20s infinite;
+    }
+    &:nth-child(2) {
+      animation: animateSkill1 40s infinite;
+    }
+    &:nth-child(3) {
+      animation: animateSkill1 20s infinite;
+      animation-delay: 6s;
+    }
+    &:nth-child(4) {
+      animation: animateSkill 20s infinite;
+      animation-delay: 6s;
+    }
+    &:nth-child(5) {
+      animation: animateSkill3 20s infinite;
+      animation-delay: 6s;
+    }
+    &:nth-child(6) {
+      animation: animateSkill3 10s infinite;
+      animation-delay: 11s;
+    }
+    &:nth-child(7) {
+      animation: animateSkill3 20s infinite;
+    }
+    &:nth-child(8) {
+      animation: animateSkill 30s infinite;
+      animation-delay: 11s;
+    }
+  }
+
+  @keyframes animateSkill {
+    0% {
+      top: 50%;
+      left: 30%;
+      opacity: 1;
+      transform: scale(1) rotate(0);
+    }
+    5% {
+      top: 0%;
+      opacity: 1;
+      left: 60%;
+      transform: scale(0.6) rotate(24deg);
+    }
+    20% {
+      top: 80%;
+      opacity: 0;
+      left: -20%;
+      transform: scale(1.4) rotate(0);
+    }
+    40% {
+      opacity: 1;
+      top: 10%;
+      left: 70%;
+      transform: scale(1) rotate(480deg);
+    }
+    70% {
+      left: 90%;
+      opacity: 0;
+      top: 90%;
+      transform: scale(0.6) rotate(380deg);
+    }
+    90% {
+      top: 90%;
+      opacity: 1;
+      left: 0%;
+      transform: scale(1.3) rotate(-100deg);
+    }
+    100% {
+      top: 50%;
+      opacity: 0;
+      left: 30%;
+      transform: scale(1) rotate(0);
+    }
+  }
+  @keyframes animateSkill1 {
+    0% {
+      top: 50%;
+      opacity: 1;
+      left: 30%;
+      transform: scale(0.6) rotate(380deg);
+    }
+    5% {
+      left: 95%;
+      opacity: 0;
+      top: 60%;
+      transform: scale(0.6) rotate(24deg);
+    }
+    20% {
+      top: 80%;
+      left: -20%;
+      opacity: 1;
+      transform: scale(1.4) rotate(0);
+    }
+    30% {
+      top: 90%;
+      left: 0%;
+      opacity: 1;
+      transform: scale(1.3) rotate(-100deg);
+    }
+    60% {
+      top: 50%;
+      left: -30%;
+      opacity: 1;
+      transform: scale(1) rotate(0);
+    }
+    80% {
+      top: 10%;
+      left: 110%;
+      opacity: 0;
+      transform: scale(1) rotate(480deg);
+    }
+    100% {
+      top: 50%;
+      left: 30%;
+      opacity: 1;
+      transform: scale(0.6) rotate(380deg);
+    }
+  }
+  @keyframes animateSkill2 {
+    0% {
+      top: 0%;
+      opacity: 1;
+      left: 60%;
+      transform: scale(0.6) rotate(24deg);
+    }
+    20% {
+      opacity: 0;
+      top: 50%;
+      left: 30%;
+      transform: scale(1) rotate(0);
+    }
+
+    40% {
+      top: 50%;
+      left: 30%;
+      opacity: 1;
+      transform: scale(1) rotate(0);
+    }
+
+    70% {
+      top: 110%;
+      left: 120%;
+      opacity: 0;
+      transform: scale(1.4) rotate(0);
+    }
+    80% {
+      top: -50%;
+      opacity: 1;
+      left: 30%;
+      transform: scale(0.6) rotate(380deg);
+    }
+    90% {
+      opacity: 1;
+      top: 90%;
+      left: 0%;
+      transform: scale(1.3) rotate(-100deg);
+    }
+    100% {
+      top: 0%;
+      opacity: 1;
+      left: 60%;
+      transform: scale(0.6) rotate(24deg);
+    }
+  }
+}

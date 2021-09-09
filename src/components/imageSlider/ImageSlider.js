@@ -52,7 +52,6 @@ const ImageSlider = ({ data, width, height, controls }) => {
   const newData = handleSlider(data, state, setState);
 
   for (let i = 1; i === newData.newArray.length; i++) {
-    console.log(i);
     toggleDivArray.push(i);
   }
 

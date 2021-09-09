@@ -61,6 +61,14 @@ const Header = () => {
     handleRoutes(arg);
   };
 
+  const checkActiveForHomeRoute = () => {
+    //some additional logic to verify you are in the home URI
+    if (!location || location.pathname !== "/") return false;
+    const { pathname } = location;
+    console.log(pathname);
+    return pathname === "/";
+  };
+
   return (
     <header className="header" ref={headerRef}>
       <div className="header__container container">
@@ -72,7 +80,11 @@ const Header = () => {
           </Link>
         </div>
         <nav className={`header__nav ${showNav && "show"}`}>
-          <NavbarLink onClick={() => handleNav("")} to="/">
+          <NavbarLink
+            onClick={() => handleNav("")}
+            isActive={checkActiveForHomeRoute}
+            to="/"
+          >
             &lt;Home /&gt;
           </NavbarLink>
           <NavbarLink onClick={() => handleNav("about")} to="/about">
