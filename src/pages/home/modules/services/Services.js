@@ -2,6 +2,7 @@ import { SectionHeaders, ServiceCard } from "components";
 import { scrollFunc } from "components/index";
 import { useLayoutEffect, useRef, useEffect } from "react";
 import { GrPersonalComputer } from "react-icons/gr";
+import { MdPhoneIphone } from "react-icons/md";
 import { useLocation } from "react-router-dom";
 import "./services.scss";
 
@@ -39,8 +40,8 @@ const Services = () => {
         />
         <div className="services__body">
           <ServiceCard
-            logo={<GrPersonalComputer />}
-            header="Mobile Friendly"
+            logo={<MdPhoneIphone />}
+            header="Mobile Friendly Websites"
             refValue={service1}
             details="Responsive websites and layouts are essential for good user experience."
             details2="Contact me for mobile friendly websites."

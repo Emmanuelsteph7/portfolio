@@ -7,9 +7,9 @@ const TestimonialCard = ({ name, status, paragraph, image, refValue }) => {
         <div className="testimonialCard__imageDiv">
           <img src={image} alt="" className="testimonialCard__image" />
         </div>
-        <h3 className="testimonialCard__name">{name}</h3>
+        <p className="testimonalCard__paragraph header5">{paragraph}</p>
+        <h3 className="testimonialCard__name header3">{name}</h3>
         <h5 className="testimonialCard__status subHeader">{status}</h5>
-        <p className="testimonalCard__paragraph">{paragraph}</p>
       </div>
     </div>
   );

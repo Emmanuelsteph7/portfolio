@@ -8,6 +8,7 @@ import react from "./images/react.png";
 import sass from "./images/sass.png";
 import html from "./images/html.png";
 import shopIt from "./images/shopIt.png";
+import mrEse from "./images/mr-ese3.jpg";
 
 export {
   person,
@@ -20,4 +21,5 @@ export {
   sass,
   html,
   shopIt,
+  mrEse,
 };

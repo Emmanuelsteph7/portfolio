@@ -1,4 +1,5 @@
-import avatar from "assets/images/def_user.jpeg";
+// import avatar from "assets/images/def_user.jpeg";
+import { mrEse } from "assets/index";
 import { SectionHeaders, TestimonialCard } from "components";
 import { scrollFunc } from "components/index";
 import { useLayoutEffect, useRef } from "react";
@@ -26,17 +27,17 @@ const Testimonial = () => {
         <SectionHeaders
           section="testimonial"
           subHeader="What my client says"
-          sectionHeader="Testimonial"
+          sectionHeader="Testimonials"
         />
         <div className="testimonial__cards">
           <TestimonialCard
-            name="Emmanuel"
-            status="client"
+            name="Glory Eseosa Efionayi"
+            status="C#.NET Developer"
             refValue={testimonial1}
-            image={avatar}
-            paragraph="He is the best Frontend Developer I know"
+            image={mrEse}
+            paragraph="Emmanuel Stephen is one of the best front end developer I know, we have worked together on some projects. He's goal oriented and result driven."
           />
-          <TestimonialCard
+          {/* <TestimonialCard
             name="Emmanuel"
             status="client"
             refValue={testimonial2}
@@ -49,7 +50,7 @@ const Testimonial = () => {
             refValue={testimonial3}
             image={avatar}
             paragraph="He is the best Frontend Developer I know"
-          />
+          /> */}
         </div>
       </div>
     </div>

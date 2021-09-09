@@ -48,15 +48,34 @@
   &:hover {
     box-shadow: 5px 3px 12px color(mainColorDark);
 
-    .serviceCard__logo {
-      background-color: color(mainColorDark);
+    &:nth-child(1) {
+      .serviceCard__logo {
+        background-color: color(mainColorDark);
 
-      svg {
-        path {
-          fill: color(mainColorDark);
-          stroke: color(lightBg);
+        svg {
+          path {
+            fill: color(whiteColor);
+            stroke: color(lightBg);
+          }
         }
       }
+    }
+
+    &:nth-child(2) {
+      .serviceCard__logo {
+        background-color: color(mainColorDark);
+
+        svg {
+          path {
+            fill: none;
+            stroke: color(lightBg);
+          }
+        }
+      }
+    }
+
+    .serviceCard__logo {
+      background-color: color(mainColorDark);
     }
   }
 
