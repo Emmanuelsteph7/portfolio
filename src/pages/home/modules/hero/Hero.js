@@ -4,6 +4,7 @@ import person from "assets/images/person.png";
 import { useLocation } from "react-router-dom";
 import "./hero.scss";
 import { useCallback, useEffect } from "react";
+import { LinkTag } from "components/index";
 
 const Hero = () => {
   const location = useLocation();
@@ -29,7 +30,13 @@ const Hero = () => {
           <p className="hero__paragraph">Frontend Developer</p>
           {/* <p className="hero__paragraph">I design and build user interfaces</p> */}
           <div className="header__btnDiv">
-            <button className="header__btn btn">Download CV</button>
+            {/* https://raw.githubusercontent.com/emmanuelsteph7/portfolio/src/assets/docs/StephenOsemeneEmmanuelCV.pdf */}
+            <LinkTag
+              externalLink="https://raw.githubusercontent.com/emmanuelsteph7/portfolio/main/src/assets/docs/StephenOsemeneEmmanuelCV.pdf"
+              btn
+              label="Download CV"
+            />
+            {/* <button className="header__btn btn">Download CV</button> */}
           </div>
           <div className="hero__social">
             <SocialIcons to="https://github.com/Emmanuelsteph7">
