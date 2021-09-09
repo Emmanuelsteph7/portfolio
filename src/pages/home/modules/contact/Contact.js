@@ -4,7 +4,7 @@ import { AiOutlinePhone } from "react-icons/ai";
 import { SiGmail } from "react-icons/si";
 import "./contact.scss";
 import { useEffect, useLayoutEffect, useRef, useState } from "react";
-import { useLocation, useHistory } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import { Form, scrollFunc } from "components/index";
 
 const Contact = () => {
@@ -52,7 +52,6 @@ const Contact = () => {
   const contact3 = useRef();
 
   const location = useLocation();
-  const history = useHistory();
 
   useLayoutEffect(() => {
     scrollFunc(contact1);
@@ -70,20 +69,7 @@ const Contact = () => {
       const position = element.offsetTop;
       window.scrollTo(0, position - 70);
     }
-
-    const handleScrollRoute = () => {
-      if (
-        element.getBoundingClientRect().top <= 80 &&
-        element.getBoundingClientRect().bottom >= 55
-      ) {
-        history.push("./contact");
-      }
-    };
-
-    window.addEventListener("scroll", handleScrollRoute);
-
-    return () => window.removeEventListener("scroll", handleScrollRoute);
-  }, []);
+  }, [location]);
 
   return (
     <div className="contact" id="contact">

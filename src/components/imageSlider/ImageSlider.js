@@ -45,7 +45,6 @@ const ImageSlider = ({ data, width, height, controls }) => {
       }
       setState(state + 1);
     }, 4000);
-    console.log(toggleDivArray);
 
     return () => clearInterval(timer);
   }, [state, data.length]);

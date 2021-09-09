@@ -2,7 +2,7 @@ import { SectionHeaders, PortfolioCard } from "components";
 import "./portfolio.scss";
 import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import { scrollFunc } from "components/index";
-import { useLocation, useHistory } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import { allData } from "../../../../utils/portfolioData";
 
 const Portfolio = () => {
@@ -10,7 +10,6 @@ const Portfolio = () => {
   const [data] = useState(allData);
   const toggleDiv = useRef();
   const location = useLocation();
-  const history = useHistory();
 
   const mappedAllData = data.map((item, key) => {
     // let refVal;
@@ -37,20 +36,7 @@ const Portfolio = () => {
       const position = element.offsetTop;
       window.scrollTo(0, position - 70);
     }
-
-    const handleScrollRoute = () => {
-      if (
-        element.getBoundingClientRect().top <= 80 &&
-        element.getBoundingClientRect().bottom >= 55
-      ) {
-        history.push("./portfolio");
-      }
-    };
-
-    window.addEventListener("scroll", handleScrollRoute);
-
-    return () => window.removeEventListener("scroll", handleScrollRoute);
-  }, []);
+  }, [location]);
 
   const handleShow = (arg) => {
     setShow(arg);

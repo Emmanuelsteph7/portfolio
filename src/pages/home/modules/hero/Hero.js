@@ -1,32 +1,24 @@
 import { SocialIcons } from "components";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
-// import { useHistory } from "react-router-dom";
 import person from "assets/images/person.png";
-import { useLocation, useHistory } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import "./hero.scss";
-import { useEffect } from "react";
+import { useCallback, useEffect } from "react";
 
 const Hero = () => {
-  const history = useHistory();
   const location = useLocation();
 
-  useEffect(() => {
+  const routeFunc = useCallback(() => {
     const element = document.querySelector("#hero");
     if (location && location.pathname === "/") {
       const position = element.offsetTop;
       window.scrollTo(0, position - 70);
     }
+  }, [location]);
 
-    const handleScrollRoute = () => {
-      if (element.getBoundingClientRect().bottom >= 55) {
-        history.push("./");
-      }
-    };
-
-    window.addEventListener("scroll", handleScrollRoute);
-
-    return () => window.removeEventListener("scroll", handleScrollRoute);
-  }, []);
+  useEffect(() => {
+    routeFunc();
+  }, [routeFunc]);
 
   return (
     <div className="hero" id="hero">

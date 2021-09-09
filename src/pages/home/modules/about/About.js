@@ -2,14 +2,13 @@ import person from "assets/images/person.png";
 import { SectionHeaders } from "components";
 import { scrollFunc } from "components/index";
 import { useEffect, useLayoutEffect, useRef } from "react";
-import { useLocation, useHistory } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import "./about.scss";
 
 const About = () => {
   const imageRef = useRef();
   const profileRef = useRef();
   const location = useLocation();
-  const history = useHistory();
 
   useLayoutEffect(() => {
     scrollFunc(imageRef);
@@ -24,22 +23,7 @@ const About = () => {
       const position = element.offsetTop;
       window.scrollTo(0, position - 70);
     }
-
-    const handleScrollRoute = () => {
-      console.log("about");
-      if (
-        !location.pathname === "/about" &&
-        element.getBoundingClientRect().top <= 80 &&
-        element.getBoundingClientRect().bottom >= 0
-      ) {
-        history.push("./about");
-      }
-    };
-
-    window.addEventListener("scroll", handleScrollRoute);
-
-    return () => window.removeEventListener("scroll", handleScrollRoute);
-  }, []);
+  }, [location]);
 
   return (
     <div className="about" id="about">
