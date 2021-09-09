@@ -8,7 +8,7 @@ import "./services.scss";
 const Services = () => {
   const service1 = useRef();
   const service2 = useRef();
-  const service3 = useRef();
+  // const service3 = useRef();
   const location = useLocation();
 
   useLayoutEffect(() => {
@@ -17,9 +17,9 @@ const Services = () => {
   useLayoutEffect(() => {
     scrollFunc(service2, 2);
   }, []);
-  useLayoutEffect(() => {
-    scrollFunc(service3, 2);
-  }, []);
+  // useLayoutEffect(() => {
+  //   scrollFunc(service3, 2);
+  // }, []);
 
   useEffect(() => {
     const element = document.querySelector("#services");
@@ -40,22 +40,24 @@ const Services = () => {
         <div className="services__body">
           <ServiceCard
             logo={<GrPersonalComputer />}
-            header="Web Development"
+            header="Mobile Friendly"
             refValue={service1}
-            details="These are the services that i offer. These are the services that i offer."
+            details="Responsive websites and layouts are essential for good user experience."
+            details2="Contact me for mobile friendly websites."
           />
           <ServiceCard
             logo={<GrPersonalComputer />}
             header="Web Development"
             refValue={service2}
-            details="These are the services that i offer. These are the services that i offer."
+            details="Optimized applications have better performance."
+            details2="Contact me for creating web applications."
           />
-          <ServiceCard
+          {/* <ServiceCard
             logo={<GrPersonalComputer />}
             header="Web Development"
             refValue={service3}
             details="These are the services that i offer. These are the services that i offer."
-          />
+          /> */}
         </div>
       </div>
     </div>

@@ -9,10 +9,12 @@ import Services from "./modules/services/Services";
 import Skills from "./modules/skills/Skills";
 import Testimonial from "./modules/testimonial/Testimonial";
 import "./home.scss";
+import { MetaData } from "components/index";
 
 const Home = () => {
   return (
     <>
+      <MetaData title="Emmanuel Stephen || Home" />
       <Header />
       <Hero />
       <About />

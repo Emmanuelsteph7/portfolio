@@ -131,7 +131,8 @@
     }
   }
 
-  .header__btn {
+  .linkTag {
+    text-align: center;
     @include maxWidth(991px) {
       width: 100%;
     }

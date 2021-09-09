@@ -26,20 +26,44 @@
 
   .about__profileInfo {
     width: 60%;
-    opacity: 0;
-    transform: translateX(100px);
-
-    &.show {
-      animation: animateLeft 0.5s forwards ease-out;
-    }
 
     @include maxWidth(767px) {
       width: 100%;
     }
   }
 
+  .about__profileHeader {
+    opacity: 0;
+    transform: translateX(100px);
+
+    &.show {
+      animation: animateLeft 0.5s forwards ease-out;
+    }
+  }
+
   .about__profileParagraph {
     font-weight: 500;
+    margin-bottom: 20px;
+    opacity: 0;
+
+    &.show {
+      &:nth-child(even) {
+        animation: animateLeft 0.5s forwards ease-out;
+        transform: translateX(100px);
+      }
+
+      &:nth-child(odd) {
+        animation: animateRight 0.5s forwards ease-out;
+        transform: translateX(-100px);
+      }
+    }
+
+    .linkTag {
+      color: color(mainColorDark);
+      font-weight: 600;
+      box-shadow: 0 0 2px color(mainColorDark);
+      padding: 0 3px;
+    }
   }
 
   .about__profileImageDiv {

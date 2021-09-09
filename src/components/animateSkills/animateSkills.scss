@@ -58,7 +58,7 @@
     }
     20% {
       top: 80%;
-      opacity: 0;
+      opacity: 1;
       left: -20%;
       transform: scale(1.4) rotate(0);
     }
@@ -70,7 +70,7 @@
     }
     70% {
       left: 90%;
-      opacity: 0;
+      opacity: 1;
       top: 90%;
       transform: scale(0.6) rotate(380deg);
     }
@@ -82,7 +82,7 @@
     }
     100% {
       top: 50%;
-      opacity: 0;
+      opacity: 1;
       left: 30%;
       transform: scale(1) rotate(0);
     }
@@ -96,7 +96,7 @@
     }
     5% {
       left: 95%;
-      opacity: 0;
+      opacity: 1;
       top: 60%;
       transform: scale(0.6) rotate(24deg);
     }
@@ -121,7 +121,7 @@
     80% {
       top: 10%;
       left: 110%;
-      opacity: 0;
+      opacity: 1;
       transform: scale(1) rotate(480deg);
     }
     100% {
@@ -139,7 +139,7 @@
       transform: scale(0.6) rotate(24deg);
     }
     20% {
-      opacity: 0;
+      opacity: 1;
       top: 50%;
       left: 30%;
       transform: scale(1) rotate(0);
@@ -155,7 +155,7 @@
     70% {
       top: 110%;
       left: 120%;
-      opacity: 0;
+      opacity: 1;
       transform: scale(1.4) rotate(0);
     }
     80% {

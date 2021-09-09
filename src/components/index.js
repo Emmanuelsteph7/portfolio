@@ -16,6 +16,7 @@ import ListItem from "./listItem/ListItem";
 import Header from "./header/Header";
 import Footer from "./footer/Footer";
 import AnimateSkills from "./animateSkills/AnimateSkills";
+import MetaData from "./metaData/MetaData";
 
 export {
   NavbarLink,
@@ -36,4 +37,5 @@ export {
   Header,
   Footer,
   AnimateSkills,
+  MetaData,
 };

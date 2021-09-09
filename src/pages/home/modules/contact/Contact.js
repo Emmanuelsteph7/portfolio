@@ -3,49 +3,49 @@ import { ImLocation } from "react-icons/im";
 import { AiOutlinePhone } from "react-icons/ai";
 import { SiGmail } from "react-icons/si";
 import "./contact.scss";
-import { useEffect, useLayoutEffect, useRef, useState } from "react";
+import { useEffect, useLayoutEffect, useRef } from "react";
 import { useLocation } from "react-router-dom";
-import { Form, scrollFunc } from "components/index";
+import { scrollFunc } from "components/index";
 
 const Contact = () => {
-  const [formState, setFormState] = useState({
-    name: "",
-    email: "",
-    project: "",
-    phoneNo: "",
-    message: "",
-  });
-  const data = [
-    {
-      name: "name",
-      placeholder: "Name",
-    },
-    {
-      name: "email",
-      type: "email",
-      placeholder: "Email",
-    },
-    {
-      name: "project",
-      placeholder: "Project",
-    },
-    {
-      name: "phoneNo",
-      type: "tel",
-      placeholder: "Phone Number",
-    },
-    {
-      name: "message",
-      type: "textarea",
-      placeholder: "Message",
-      rows: "5",
-    },
-    {
-      name: "button",
-      type: "submit",
-      label: "Send Message",
-    },
-  ];
+  // const [formState, setFormState] = useState({
+  //   name: "",
+  //   email: "",
+  //   project: "",
+  //   phoneNo: "",
+  //   message: "",
+  // });
+  // const data = [
+  //   {
+  //     name: "name",
+  //     placeholder: "Name",
+  //   },
+  //   {
+  //     name: "email",
+  //     type: "email",
+  //     placeholder: "Email",
+  //   },
+  //   {
+  //     name: "project",
+  //     placeholder: "Project",
+  //   },
+  //   {
+  //     name: "phoneNo",
+  //     type: "tel",
+  //     placeholder: "Phone Number",
+  //   },
+  //   {
+  //     name: "message",
+  //     type: "textarea",
+  //     placeholder: "Message",
+  //     rows: "5",
+  //   },
+  //   {
+  //     name: "button",
+  //     type: "submit",
+  //     label: "Send Message",
+  //   },
+  // ];
 
   const contact1 = useRef();
   const contact2 = useRef();
@@ -101,7 +101,7 @@ const Contact = () => {
             icon={<SiGmail />}
           />
         </div>
-        <Form data={data} state={formState} stateFunc={setFormState} />
+        {/* <Form data={data} state={formState} stateFunc={setFormState} /> */}
       </div>
     </div>
   );
