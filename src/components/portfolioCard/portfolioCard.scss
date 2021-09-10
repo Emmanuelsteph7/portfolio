@@ -3,7 +3,7 @@
 .portfolioCard {
   width: 30%;
   max-width: 350px;
-  box-shadow: 0 0 3px color(mainColorDark);
+  box-shadow: 0 0 1px color(mainColorDark);
   background-color: color(white);
   border-radius: 5px;
   margin-bottom: 30px;
@@ -55,7 +55,7 @@
   }
 
   &:hover {
-    box-shadow: 5px 3px 12px color(mainColorDark);
+    box-shadow: 0px 1px 5px color(mainColorDark);
 
     .portfolioCard__imageDiv {
       background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6));

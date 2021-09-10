@@ -35,7 +35,7 @@ const Testimonial = () => {
             status="C#.NET Developer"
             refValue={testimonial1}
             image={mrEse}
-            paragraph="Emmanuel Stephen is one of the best front end developer I know, we have worked together on some projects. He's goal oriented and result driven."
+            paragraph="Emmanuel Stephen is one of the best front end developer I know. We have worked together on some projects. He's goal oriented and result driven."
           />
           {/* <TestimonialCard
             name="Emmanuel"

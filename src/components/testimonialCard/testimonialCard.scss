@@ -1,13 +1,10 @@
 @use "styles" as *;
 
 .testimonialCard {
-  // background-color: color(mainColorDark);
   color: color(lightBg);
   width: 74%;
   padding: 20px 25px;
   border-radius: 5px;
-  // max-width: 350px;
-  // box-shadow: 0 0 3px color(mainColorDark);
   position: relative;
   transition: 0.3s ease-out;
 
@@ -47,9 +44,9 @@
     width: 100%;
   }
 
-  &:hover {
-    box-shadow: 5px 3px 4px color(mainColorDark);
-  }
+  // &:hover {
+  //   box-shadow: 5px 3px 4px color(mainColorDark);
+  // }
 
   .testimonialCard__container {
     width: 100%;

@@ -22,22 +22,49 @@ $colors: (
 );
 
 $colors-dark: (
-  "bgDark": #10121a,
+  "mainColor": #10121a,
   "borderColor": #2e344e,
   "primaryColor": #007bff,
   "secondaryColor": #6c757d,
-  "white": #ffffff,
+  "mainColorDark": #ffffff,
   "fontLightColor": #a4acc4,
   "fontDarkColor": #313131,
   "fontDarkColor2": #151515,
   "sidebarDarkColor": map-get($colors, fontLightColor),
 );
 
+// :root {
+//   @each $name, $value in $colors {
+//     --#{$name}: #{$value};
+//   }
+//   --theme: "light";
+// }
+
 :root {
-  @each $name, $value in $colors {
-    --#{$name}: #{$value};
+  --mainColor: #3e0e12;
+  --mainColorDark: #2f0a0d;
+  --textColor: #524748;
+  --firstColorLight: #7b6f71;
+  --lightBg: #fbf9f9;
+  --lightBg2: rgba(251, 249, 249, 0.9);
+  --whiteColor: #ffffff;
+}
+
+body {
+  &.dark {
+    --mainColor: #fbf9f9;
+    --mainColorDark: #fbf9f9;
+    --textColor: #fbf9f9;
+    --firstColorLight: #7b6f71;
+    --lightBg: #2b2c2f;
+    --lightBg2: rgba(43, 44, 47, 0.9);
+    --whiteColor: #2b2c2f;
+
+    .footer {
+      background-color: transparent;
+      color: var(--mainColorDark);
+    }
   }
-  --theme: "light";
 }
 
 @media (prefers-color-scheme: dark) {

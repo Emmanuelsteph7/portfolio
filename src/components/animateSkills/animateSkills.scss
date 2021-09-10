@@ -11,6 +11,7 @@
   .skillsCard {
     opacity: 1;
     position: absolute;
+    top: -20%;
 
     &:nth-child(1) {
       animation: animateSkill 20s infinite;

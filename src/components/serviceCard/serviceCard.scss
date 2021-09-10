@@ -3,8 +3,7 @@
 .serviceCard {
   width: 30%;
   max-width: 350px;
-  box-shadow: 0 0 3px color(mainColorDark);
-  background-color: color(white);
+  box-shadow: 0 0 1px color(mainColorDark);
   position: relative;
   border-radius: 5px;
   transition: 0.3s ease-out;
@@ -21,6 +20,13 @@
   &:nth-child(2) {
     opacity: 0;
     transform: translateY(-100px);
+
+    svg {
+      path {
+        fill: none;
+        stroke: color(mainColorDark);
+      }
+    }
 
     &.show {
       animation: animateDown 0.5s forwards ease-out;
@@ -46,7 +52,7 @@
   }
 
   &:hover {
-    box-shadow: 5px 3px 12px color(mainColorDark);
+    box-shadow: 0px 1px 5px color(mainColorDark);
 
     &:nth-child(1) {
       .serviceCard__logo {

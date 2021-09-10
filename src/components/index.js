@@ -17,6 +17,7 @@ import Header from "./header/Header";
 import Footer from "./footer/Footer";
 import AnimateSkills from "./animateSkills/AnimateSkills";
 import MetaData from "./metaData/MetaData";
+import ThemeToggle from "./themeToggle/ThemeToggle";
 
 export {
   NavbarLink,
@@ -38,4 +39,5 @@ export {
   Footer,
   AnimateSkills,
   MetaData,
+  ThemeToggle,
 };

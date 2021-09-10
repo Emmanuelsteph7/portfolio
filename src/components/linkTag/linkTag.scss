@@ -19,11 +19,12 @@
     cursor: pointer;
     background-color: color(mainColor);
     transition: 0.3s ease-in-out;
+    font-weight: 600;
 
     &:hover {
-      background-color: color(mainColor);
-      color: color(lightBg);
-      border: 1px solid color(mainColor);
+      background-color: color(lightBg);
+      color: color(mainColorDark);
+      border: 1px solid color(mainColorDark);
     }
   }
 
