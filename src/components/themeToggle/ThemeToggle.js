@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { FaMoon } from "react-icons/fa";
 import { BsSun } from "react-icons/bs";
+import "./themeToggle.scss";
 
 const ThemeToggle = () => {
   const [mode, setMode] = useState(() => localStorage.getItem("mode"));
@@ -37,23 +38,19 @@ const ThemeToggle = () => {
       localStorage.setItem("mode", "light");
     }
   }, [mode]);
+
   return (
     <div
-      style={toggleStyle}
       className="themeToggle"
       onClick={() => setMode((mode) => (mode === "light" ? "dark" : "light"))}
     >
-      {mode === "dark" ? <BsSun /> : <FaMoon />}
+      {mode === "dark" ? (
+        <BsSun className="themeToggle__sun" />
+      ) : (
+        <FaMoon className="themeToggle__moon" />
+      )}
     </div>
   );
-};
-
-const toggleStyle = {
-  position: "fixed",
-  bottom: "20px",
-  right: "15px",
-  zIndex: "3",
-  cursor: "pointer",
 };
 
 export default ThemeToggle;

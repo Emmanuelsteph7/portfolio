@@ -10,6 +10,15 @@
     color: color(mainColor);
   }
 
+  &.icon {
+    display: flex;
+    align-items: center;
+
+    svg {
+      margin-right: 5px;
+    }
+  }
+
   &.btn {
     border: 1px solid color(mainColor);
     outline: none;

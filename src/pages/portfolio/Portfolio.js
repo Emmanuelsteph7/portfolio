@@ -7,6 +7,7 @@ import { useEffect, useState } from "react";
 import Technologies from "./modules/technologies/Technologies";
 import Resources from "./modules/resources/Resources";
 import Footer from "components/footer/Footer";
+import { ThemeToggle } from "components/index";
 
 const Portfolio = ({ match }) => {
   const [data, setData] = useState([]);
@@ -26,6 +27,7 @@ const Portfolio = ({ match }) => {
   return (
     <>
       <Header />
+      <ThemeToggle />
       {newData && (
         <>
           <Banner

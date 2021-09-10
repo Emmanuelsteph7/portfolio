@@ -1,0 +1,39 @@
+@use "styles" as *;
+
+.themeToggle {
+  position: fixed;
+  bottom: 20px;
+  right: 0;
+  z-index: 3;
+  cursor: pointer;
+  width: 50px;
+  height: 34px;
+  display: flex;
+  font-size: 2rem;
+  background-color: color(lightBg);
+  justify-content: center;
+  align-items: center;
+
+  .themeToggle__sun {
+    color: yellow;
+    animation: animateTheme 5s ease-in-out infinite;
+  }
+  .themeToggle__moon {
+    animation: animateTheme 9s ease-in-out infinite;
+  }
+}
+
+@keyframes animateTheme {
+  0% {
+    transform: rotate(0);
+  }
+  40% {
+    transform: rotate(240deg);
+  }
+  70% {
+    transform: rotate(480deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
