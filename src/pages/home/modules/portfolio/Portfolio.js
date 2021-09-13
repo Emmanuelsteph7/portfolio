@@ -12,9 +12,34 @@ const Portfolio = () => {
   const location = useLocation();
 
   const mappedAllData = data.map((item, key) => {
-    // let refVal;
+    return (
+      <PortfolioCard
+        key={key}
+        name={item.name}
+        link={`/portfolio/${item.id}`}
+        desc={item.desc}
+        img={item.images[0].src}
+      />
+    );
+  });
 
-    // const refVal2 = RefFunc(refVal);
+  const webData = data.filter((item) => item.category === "web");
+
+  const mappedWebData = webData.map((item, key) => {
+    return (
+      <PortfolioCard
+        key={key}
+        name={item.name}
+        link={`/portfolio/${item.id}`}
+        desc={item.desc}
+        img={item.images[0].src}
+      />
+    );
+  });
+
+  const mernData = data.filter((item) => item.category === "mern");
+
+  const mappedMernData = mernData.map((item, key) => {
     return (
       <PortfolioCard
         key={key}
@@ -72,6 +97,12 @@ const Portfolio = () => {
         </div>
         <div className={`portfolio__cards ${show === "all" ? "active" : ""}`}>
           {mappedAllData}
+        </div>
+        <div className={`portfolio__cards ${show === "web" ? "active" : ""}`}>
+          {mappedWebData}
+        </div>
+        <div className={`portfolio__cards ${show === "mern" ? "active" : ""}`}>
+          {mappedMernData}
         </div>
       </div>
     </div>
