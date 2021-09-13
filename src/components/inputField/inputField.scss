@@ -12,17 +12,18 @@
 
   .formGroup__input,
   .formGroup__textarea {
-    border: 1px solid color(mainColorDark);
+    box-shadow: 0 0 1px color(mainColorDark);
     border-radius: 5px;
-    background-color: color(lightBg);
+    border: none;
+    background-color: transparent;
     outline: none;
     width: 100%;
     padding: 0.6rem;
+    color: color(mainColorDark);
     box-sizing: border-box;
     transition: 0.3s;
 
     &:focus {
-      background-color: color(white);
       box-shadow: 0 0 5px color(mainColorDark);
     }
   }

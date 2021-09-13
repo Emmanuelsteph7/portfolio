@@ -33,6 +33,7 @@ const Form = ({
   height,
   maxWidth,
   maxHeight,
+  onSubmit,
 }) => {
   const newData = handleFormData(data, state, stateFunc);
 
@@ -72,8 +73,21 @@ const Form = ({
     formStyle.maxHeight = maxHeight;
   }
 
+  const handleSubmit = (e) => {
+    if (onSubmit) {
+      return onSubmit(e);
+    }
+
+    return null;
+  };
+
   return (
-    <form className="form" style={formStyle}>
+    <form
+      className="form"
+      style={formStyle}
+      noValidate
+      onSubmit={(e) => handleSubmit(e)}
+    >
       {mappedData}
     </form>
   );

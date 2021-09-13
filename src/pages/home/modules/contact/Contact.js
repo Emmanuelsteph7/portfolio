@@ -1,51 +1,52 @@
-import { ContactCard, SectionHeaders } from "components";
-import { ImLocation } from "react-icons/im";
-import { AiOutlinePhone } from "react-icons/ai";
-import { SiGmail } from "react-icons/si";
+import { SectionHeaders } from "components";
+// import { ImLocation } from "react-icons/im";
+// import { AiOutlinePhone } from "react-icons/ai";
+// import { SiGmail } from "react-icons/si";
 import "./contact.scss";
-import { useEffect, useLayoutEffect, useRef } from "react";
+import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import { useLocation } from "react-router-dom";
-import { scrollFunc } from "components/index";
+import { Form, scrollFunc } from "components/index";
+import axios from "axios";
 
 const Contact = () => {
-  // const [formState, setFormState] = useState({
-  //   name: "",
-  //   email: "",
-  //   project: "",
-  //   phoneNo: "",
-  //   message: "",
-  // });
-  // const data = [
-  //   {
-  //     name: "name",
-  //     placeholder: "Name",
-  //   },
-  //   {
-  //     name: "email",
-  //     type: "email",
-  //     placeholder: "Email",
-  //   },
-  //   {
-  //     name: "project",
-  //     placeholder: "Project",
-  //   },
-  //   {
-  //     name: "phoneNo",
-  //     type: "tel",
-  //     placeholder: "Phone Number",
-  //   },
-  //   {
-  //     name: "message",
-  //     type: "textarea",
-  //     placeholder: "Message",
-  //     rows: "5",
-  //   },
-  //   {
-  //     name: "button",
-  //     type: "submit",
-  //     label: "Send Message",
-  //   },
-  // ];
+  const [formState, setFormState] = useState({
+    name: "",
+    email: "",
+    project: "",
+    phoneNo: "",
+    message: "",
+  });
+  const data = [
+    {
+      name: "name",
+      placeholder: "Name",
+    },
+    {
+      name: "email",
+      type: "email",
+      placeholder: "Email",
+    },
+    // {
+    //   name: "project",
+    //   placeholder: "Project",
+    // },
+    // {
+    //   name: "phoneNo",
+    //   type: "tel",
+    //   placeholder: "Phone Number",
+    // },
+    {
+      name: "message",
+      type: "textarea",
+      placeholder: "Message",
+      rows: "5",
+    },
+    {
+      name: "button",
+      type: "submit",
+      label: "Send Message",
+    },
+  ];
 
   const contact1 = useRef();
   const contact2 = useRef();
@@ -71,6 +72,28 @@ const Contact = () => {
     }
   }, [location]);
 
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    let body = {
+      name: formState.name,
+      email: formState.email,
+      message: formState.message,
+    };
+
+    const headers = {
+      "Content-Type": "application/json",
+    };
+
+    const res = axios.post(
+      "https://eming-mailer.herokuapp.com/portfolio",
+      body,
+      headers
+    );
+
+    console.log(res);
+  };
+
   return (
     <div className="contact" id="contact">
       <div className="contact__container container">
@@ -79,7 +102,7 @@ const Contact = () => {
           subHeader="For projects"
           sectionHeader="Contact Me"
         />
-        <div className="contact__cards">
+        {/* <div className="contact__cards">
           <ContactCard
             name="Location"
             refValue={contact1}
@@ -100,8 +123,13 @@ const Contact = () => {
             details="stephenemmanuel770@gmail.com"
             icon={<SiGmail />}
           />
-        </div>
-        {/* <Form data={data} state={formState} stateFunc={setFormState} /> */}
+        </div> */}
+        <Form
+          data={data}
+          onSubmit={handleSubmit}
+          state={formState}
+          stateFunc={setFormState}
+        />
       </div>
     </div>
   );
