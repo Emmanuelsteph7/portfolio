@@ -85,8 +85,8 @@ const Contact = () => {
       "Content-Type": "application/json",
     };
 
-    const res = axios.post(
-      "https://eming-mailer.herokuapp.com/portfolio",
+    const res = await axios.post(
+      "https://eming-mailer.herokuapp.com/api/portfolio",
       body,
       headers
     );
