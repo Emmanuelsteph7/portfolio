@@ -5,7 +5,12 @@ import { SectionHeaders } from "components";
 import "./contact.scss";
 import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import { useLocation } from "react-router-dom";
-import { Form, scrollFunc } from "components/index";
+import {
+  Form,
+  scrollFunc,
+  // useErrorAlert,
+  useSuccessAlert,
+} from "components/index";
 import axios from "axios";
 
 const Contact = () => {
@@ -47,6 +52,9 @@ const Contact = () => {
       label: "Send Message",
     },
   ];
+  const [loading, setLoading] = useState(false);
+  const dispatchSuccessMsg = useSuccessAlert();
+  // const dispatchErrorMsg = useErrorAlert();
 
   const contact1 = useRef();
   const contact2 = useRef();
@@ -72,8 +80,13 @@ const Contact = () => {
     }
   }, [location]);
 
+  useEffect(() => {
+    console.log(loading);
+  }, [loading]);
+
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setLoading(true);
 
     let body = {
       name: formState.name,
@@ -85,15 +98,31 @@ const Contact = () => {
       "Content-Type": "application/json",
     };
 
+    // try {
     const res = await axios.post(
+      // "http://localhost:5000/api/portfolio",
       "https://eming-mailer.herokuapp.com/api/portfolio",
       body,
       headers
     );
 
-    console.log(res);
+    console.log(res.data);
+    if (res) {
+      setLoading(false);
+      console.log(res.data.message);
+      dispatchSuccessMsg({ message: res.data.message });
+      setFormState((prev) => ({
+        ...prev,
+        name: "",
+        email: "",
+        message: "",
+      }));
+    }
+    // } catch (err) {
+    //   setLoading(false);
+    //   dispatchErrorMsg({ message: err.message });
+    // }
   };
-
   return (
     <div className="contact" id="contact">
       <div className="contact__container container">

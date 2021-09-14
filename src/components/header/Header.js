@@ -65,7 +65,6 @@ const Header = () => {
     //some additional logic to verify you are in the home URI
     if (!location || location.pathname !== "/") return false;
     const { pathname } = location;
-    console.log(pathname);
     return pathname === "/";
   };
 

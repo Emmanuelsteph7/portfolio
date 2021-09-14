@@ -18,6 +18,10 @@ import Footer from "./footer/Footer";
 import AnimateSkills from "./animateSkills/AnimateSkills";
 import MetaData from "./metaData/MetaData";
 import ThemeToggle from "./themeToggle/ThemeToggle";
+import AlertProvider, {
+  useErrorAlert,
+  useSuccessAlert,
+} from "./alert/AlertContext";
 
 export {
   NavbarLink,
@@ -40,4 +44,7 @@ export {
   AnimateSkills,
   MetaData,
   ThemeToggle,
+  AlertProvider,
+  useErrorAlert,
+  useSuccessAlert,
 };
