@@ -4,13 +4,16 @@ import "./index.scss";
 import App from "./App";
 import { BrowserRouter as Router } from "react-router-dom";
 import { AlertProvider } from "./components";
+import { HelmetProvider } from "react-helmet-async";
 
 ReactDOM.render(
   <React.StrictMode>
     <Router>
-      <AlertProvider>
-        <App />
-      </AlertProvider>
+      <HelmetProvider>
+        <AlertProvider>
+          <App />
+        </AlertProvider>
+      </HelmetProvider>
     </Router>
   </React.StrictMode>,
   document.getElementById("root")

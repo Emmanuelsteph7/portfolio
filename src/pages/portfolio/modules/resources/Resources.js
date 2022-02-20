@@ -29,10 +29,12 @@ const Resources = ({ liveLink, githubLink }) => {
           Check Out the Live Site:
           <LinkTag externalLink={liveLink} label={liveLink} />
         </p>
-        <p className="portRes__paragraph" ref={paragraph2Ref}>
-          Check Out the Repo:
-          <LinkTag externalLink={githubLink} label={githubLink} />
-        </p>
+        {githubLink && (
+          <p className="portRes__paragraph" ref={paragraph2Ref}>
+            Check Out the Repo:
+            <LinkTag externalLink={githubLink} label={githubLink} />
+          </p>
+        )}
       </div>
     </div>
   );

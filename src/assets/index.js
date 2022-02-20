@@ -25,6 +25,11 @@ import dashboard1 from "./images/dashboard-1.png";
 import dashboard2 from "./images/dashboard-2.png";
 import dashboard3 from "./images/dashboard-3.png";
 import dashboard4 from "./images/dashboard-4.png";
+import powerfull1 from "./images/powerfull1.png";
+import powerfull2 from "./images/powerfull2.png";
+import powerfull3 from "./images/powerfull3.png";
+import champion1 from "./images/champion1.png";
+import champion2 from "./images/champion2.png";
 
 export {
   person,
@@ -54,4 +59,9 @@ export {
   dashboard2,
   dashboard3,
   dashboard4,
+  powerfull1,
+  powerfull2,
+  powerfull3,
+  champion1,
+  champion2,
 };

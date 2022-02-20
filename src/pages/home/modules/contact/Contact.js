@@ -81,7 +81,7 @@ const Contact = () => {
   }, [location]);
 
   useEffect(() => {
-    console.log(loading);
+    // console.log(loading);
   }, [loading]);
 
   const handleSubmit = async (e) => {

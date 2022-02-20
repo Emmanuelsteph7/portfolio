@@ -16,9 +16,113 @@ import {
   dashboard2,
   dashboard3,
   dashboard4,
+  champion1,
+  champion2,
 } from "assets/index";
+import { powerfull1, powerfull2, powerfull3 } from "../assets";
 
 export const allData = [
+  {
+    id: "powerfull-web",
+    name: "Powerfull ",
+    desc: "MERN Stack",
+    category: "web",
+    about: [
+      {
+        paragraph: "Eming Shop IT is an E-commerce website.",
+      },
+    ],
+    images: [
+      {
+        src: powerfull1,
+      },
+      {
+        src: powerfull2,
+      },
+      {
+        src: powerfull3,
+      },
+    ],
+    features: [
+      {
+        paragraph: "Responsive Website",
+      },
+      {
+        paragraph: "Search and Filter",
+      },
+      {
+        paragraph: "User Authentication",
+      },
+      {
+        paragraph: "Reset Password",
+      },
+      {
+        paragraph: "Forgot Password",
+      },
+      {
+        paragraph: "Persist Cart Items in Local Storage",
+      },
+      {
+        paragraph: "Update Profile",
+      },
+      {
+        paragraph: "Pagination",
+      },
+    ],
+    technologies: ["React Js", "Sass", "Typescript", "Github"],
+    links: {
+      live: "https://powerfull.tech/",
+    },
+  },
+  {
+    id: "chmpion-group-limited",
+    name: "Champion Group Limited ",
+    desc: "MERN Stack",
+    category: "web",
+    about: [
+      {
+        paragraph: "Eming Shop IT is an E-commerce website.",
+      },
+    ],
+    images: [
+      {
+        src: champion1,
+      },
+      {
+        src: champion2,
+      },
+    ],
+    features: [
+      {
+        paragraph: "Responsive Website",
+      },
+      {
+        paragraph: "Search and Filter",
+      },
+      {
+        paragraph: "User Authentication",
+      },
+      {
+        paragraph: "Reset Password",
+      },
+      {
+        paragraph: "Forgot Password",
+      },
+      {
+        paragraph: "Persist Cart Items in Local Storage",
+      },
+      {
+        paragraph: "Update Profile",
+      },
+      {
+        paragraph: "Pagination",
+      },
+    ],
+    technologies: ["React Js", "Sass", "Github"],
+    links: {
+      live: "https://championgroupltd.com/",
+    },
+  },
   {
     id: "eming-shop-it",
     name: "Eming Shop IT",

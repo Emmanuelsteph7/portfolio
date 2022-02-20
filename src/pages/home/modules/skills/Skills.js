@@ -8,7 +8,14 @@ import {
   FaGithub,
   FaNodeJs,
 } from "react-icons/fa";
-import { SiSass, SiJavascript } from "react-icons/si";
+import {
+  SiSass,
+  SiJavascript,
+  SiTypescript,
+  SiRedux,
+  SiNextdotjs,
+  SiTailwindcss,
+} from "react-icons/si";
 import "./skills.scss";
 
 const Skills = () => {
@@ -20,6 +27,10 @@ const Skills = () => {
   const skill6 = useRef();
   const skill7 = useRef();
   const skill8 = useRef();
+  const skill9 = useRef();
+  const skill10 = useRef();
+  const skill11 = useRef();
+  const skill12 = useRef();
 
   useLayoutEffect(() => {
     scrollFunc(skill1, 2);
@@ -45,6 +56,18 @@ const Skills = () => {
   useLayoutEffect(() => {
     scrollFunc(skill8, 2);
   }, []);
+  useLayoutEffect(() => {
+    scrollFunc(skill9, 2);
+  }, []);
+  useLayoutEffect(() => {
+    scrollFunc(skill10, 2);
+  }, []);
+  useLayoutEffect(() => {
+    scrollFunc(skill11, 2);
+  }, []);
+  useLayoutEffect(() => {
+    scrollFunc(skill12, 2);
+  }, []);
 
   return (
     <div className="skills">
@@ -67,6 +90,18 @@ const Skills = () => {
           <SkillsCard name="Git" src={<FaGitAlt />} refValue={skill6} />
           <SkillsCard name="GitHub" src={<FaGithub />} refValue={skill7} />
           <SkillsCard name="Node Js" src={<FaNodeJs />} refValue={skill8} />
+          <SkillsCard
+            name="TypeScript"
+            src={<SiTypescript />}
+            refValue={skill9}
+          />
+          <SkillsCard name="Redux" src={<SiRedux />} refValue={skill10} />
+          <SkillsCard name="Next JS" src={<SiNextdotjs />} refValue={skill11} />
+          <SkillsCard
+            name="Tailwind CSS"
+            src={<SiTailwindcss />}
+            refValue={skill12}
+          />
         </div>
       </div>
     </div>
